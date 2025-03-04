@@ -16,11 +16,16 @@ const Home = () => {
         })
     }
 
+    const handleRemove = (id) => {
+        const filteredTodos = todos.filter((todo) => todo.id !== id)
+        setTodos(filteredTodos)
+    }
+
     return (
         <div className={style.container}>
             <h1 className='intro'>Daily Task</h1>
             <NewTodo onAddtodo={handleAddtodo} />
-            <Todos todos={todos} />
+            <Todos todos={todos} onRemove={handleRemove} />
         </div>
     );
 };
