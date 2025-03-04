@@ -3,7 +3,7 @@ import style from "./Todo.module.css"
 import React from 'react';
 
 const Todo = (props) => {
-    const { title, desc } = props.send
+    const { title, desc, id } = props.send
     return (
         <div>
             <article className={style.todo}>
