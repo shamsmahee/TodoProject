@@ -17,8 +17,8 @@ const Home = () => {
     }
 
     const handleRemove = (id) => {
-        const filteredTodos = todos.filter((todo) => todo.id !== id)
-        setTodos(filteredTodos)
+        const filteredTodos = prevtodos.filter((todo) => todo.id !== id)
+        return filteredTodos;
     }
 
     return (
